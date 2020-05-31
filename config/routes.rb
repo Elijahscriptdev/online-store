@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/home'
   get 'cart/show'
   resources :shops, only:[:index, :show]
   resources :products
