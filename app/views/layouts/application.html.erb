@@ -19,23 +19,29 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
+
+            <%= link_to  "Logo", root_path, class:"brand-logo" %>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+                <li><%= link_to  "Shop", shops_path %></li>
+                <li><%= link_to  "Account", "#" %></li>
+                <li><%= link_to  "About Us", about_path %></li>
+                <li><%= link_to  "Contact Us", contact_path %></li>
+                <li><%= link_to  "Products", products_path %></li>
+                <li><%= link_to  "View Cart", cart_show_path %></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><%= link_to  "Shop", shops_path %></li>
+        <li><%= link_to  "Account", "#" %></li>
+        <li><%= link_to  "About Us", about_path %></li>
+        <li><%= link_to  "Contact Us", contact_path %></li>
+        <li><%= link_to  "Products", products_path %></li>
+        <li><%= link_to  "View Cart", cart_show_path %></li>
     </ul>
+
     <%= yield %>
 </body>
 

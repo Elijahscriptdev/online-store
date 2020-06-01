@@ -16,3 +16,24 @@
 // @import "bootstrap/scss/bootstrap";
 
 @import 'materialize-css/dist/css/materialize';
+
+// .slider .indicators .indicator-item {
+//   background-color: #666666;
+//   border: 3px solid #ffffff;
+//   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+//   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+//   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+// }
+// .slider .indicators .indicator-item.active {
+//   background-color: #ffffff;
+// }
+// .slider {
+//   width: 100%;
+//   margin: 0 auto;
+// }
+.slider .indicators {
+//   bottom: 60px;
+//   z-index: 100;
+    // display: none;
+  /* text-align: left; */
+}
