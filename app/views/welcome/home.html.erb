@@ -1,3 +1,5 @@
+<%
+=begin%>
 <!-- Section: Slider -->
 <section class="slider">
     <ul class="slides">
@@ -27,7 +29,36 @@
         </li>
     </ul>
 </section>
-
+<%
+=end%>
+<div class="bg-img">
+    <div class="containe">
+        <%
+=begin%>
+        <div class="topnav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <%
+=end%>
+        <nav class="">
+            <div class="nav-wrapper">
+                <%= link_to  "easyEAT", root_path, class:"brand-logo" %>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><%= link_to  "Shop", shops_path %></li>
+                    <li><%= link_to  "Account", "#" %></li>
+                    <li><%= link_to  "About Us", about_path %></li>
+                    <li><%= link_to  "Contact Us", contact_path %></li>
+                    <li><%= link_to  "Products", products_path %></li>
+                    <li><%= link_to  "View Cart", cart_show_path %></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
 <section class="con">
     <h2 align="center">Our Top Rated Product</h2>
     <div class="row">
