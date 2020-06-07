@@ -3,6 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 import 'bootstrap'
+import "@fortawesome/fontawesome-free/js/all";
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -14,3 +15,29 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+
+// $(document).on('turbolinks:load', function () {
+
+// });
+
+
+$(document).ready(function () {
+
+    $(".fa-bars").click(function () {
+        $(".me").addClass("open");
+    });
+    $(".fa-times").click(function () {
+        $(".me").removeClass("open");
+    });
+
+    $("#btnFadeOut").click(function () {
+        $('body').addClass('animated fadeOut')
+    });
+
+    $("#btnHinge").click(function () {
+        $('body').addClass('animated hinge')
+    });
+
+});

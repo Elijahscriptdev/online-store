@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>OnlineShop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body class="me">
+    <header>
+        <div class="containers">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <a href="">Logo</a>
+                <ul class="nav-list">
+                    <li class="nav-item"><%= link_to  "Home", root_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Shop", shops_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Account", "#", class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "About Us", about_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Contact Us", contact_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Products", products_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "View Cart", cart_show_path, class:"nav-link" %></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <%= yield %>
-  </body>
+</body>
+
 </html>
