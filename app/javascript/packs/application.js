@@ -32,6 +32,10 @@ $(document).ready(function () {
         $(".me").removeClass("open");
     });
 
+    // $('.nav-link').click(function () {
+    //     location.reload();
+    // });
+
     $("#btnFadeOut").click(function () {
         $('body').addClass('animated fadeOut')
     });
