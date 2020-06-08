@@ -219,25 +219,20 @@ header{
   text-decoration: none;
 }
 
-// .box{
-//         // width: 50px;
-//         max-width: 300px;      
-//         // border: 5px solid black;
-//         max-height: 250px;
-//     }   
+.img-col{
+  justify-self: center;
+}
 
-//     img{
-//         // max-width: 50px;
-//         height: 50px;
-//         display: block; /* remove extra space below image */
-//     }
-
-// .img1{
-//   width: 80%;
-// }
-
-.img-col {
-  // width: 80%;
+.img1 {
+  margin: 25px auto 0;
+  width: 160px!important;
   border: 1px solid black;
-  // padding: 0!important;
+  padding: 10px 10px!important;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.ro{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
