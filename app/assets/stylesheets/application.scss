@@ -314,10 +314,6 @@ footer{
   animation: up 2s infinite;
 }
 
-.footer-content{
-  
-}
-
 .footer-content h4{
   text-transform: uppercase;
   font-size: 2rem;
@@ -483,21 +479,21 @@ footer{
 
 // hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 
-.block {
-  height: 5em;
-  line-height: 5em;
-  width: 10em;
-  background: #464646;
-  color: #fdfdfd;
-  text-align: center;
-  margin: 1em auto;
-  text-shadow: 0 0 1px #333; /* so one can see fadeBgColor properly */
-}
+// .block {
+//   height: 5em;
+//   line-height: 5em;
+//   width: 10em;
+//   background: #464646;
+//   color: #fdfdfd;
+//   text-align: center;
+//   margin: 1em auto;
+//   text-shadow: 0 0 1px #333; /* so one can see fadeBgColor properly */
+// }
 
 .animatable {
   
   /* initially hide animatable objects */
-  visibility: hidden;
+  visibility: initial;
   
   /* initially pause animatable objects their animations */
   -webkit-animation-play-state: paused;   
@@ -578,42 +574,6 @@ footer{
 
 
 
-@-webkit-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	20% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@-moz-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	20% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@-o-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	20% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -628,9 +588,10 @@ footer{
 		opacity: 1;
 	}
 }
+
 @-webkit-keyframes bounceInLeft {
 	0% {
-		opacity: 0;
+		opacity: 1;
 		-webkit-transform: translateX(-2000px);
 	}
 	60% {
@@ -690,7 +651,7 @@ footer{
 
 @keyframes bounceInLeft {
 	0% {
-		opacity: 0;
+		opacity: 1;
 		transform: translateX(-2000px);
 	}
 
