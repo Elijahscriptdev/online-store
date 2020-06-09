@@ -45,3 +45,19 @@ $(document).ready(function () {
     });
 
 });
+
+window.sr = ScrollReavel();
+
+sr.reveal('.animate-left', {
+    origin: 'left',
+    duration: 1000,
+    distane: '25rem',
+    delay: 600
+});
+
+sr.reveal('.animate-right', {
+    origin: 'right',
+    duration: 1000,
+    distane: '25rem',
+    delay: 600
+});
