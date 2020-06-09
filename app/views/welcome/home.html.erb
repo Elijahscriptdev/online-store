@@ -152,7 +152,7 @@
 <section class="culinary-delight">
     <div class="container">
         <div class="restaurant-info">
-            <div class="restaurant-description padding-right animate-left">
+            <div class="restaurant-description padding-right animatable bounceInLeft">
                 <div class="global-headline">
                     <h2 class="headline headline-dark"> Our Story</h2>
                 </div>
@@ -165,30 +165,10 @@
                 </p>
                 <%= link_to  "About Us", about_path, class:"btn-about " %>
             </div>
-            <div class="image-group">
+            <div class="image-group animatable bounceInRight">
                 <img class="animate-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456838/k5gkhzjcuqvkwp6oxr4l.jpg" alt="">
                 <img class="animate-bottom" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456838/k5gkhzjcuqvkwp6oxr4l.jpg" alt="">
             </div>
         </div>
     </div>
 </section>
-
-
-
-<script>
-    window.sr = ScrollReavel();
-
-    sr.reveal('.animate-left', {
-        origin: 'left',
-        duration: 1000,
-        distane: '25rem',
-        delay: 600
-    });
-
-    sr.reveal('.animate-right', {
-        origin: 'right',
-        duration: 1000,
-        distane: '25rem',
-        delay: 600
-    });
-</script>
