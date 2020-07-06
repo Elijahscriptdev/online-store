@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   # get 'welcome/home'
   # get 'welcome/about_us'
   # get 'welcome/contact_us'
