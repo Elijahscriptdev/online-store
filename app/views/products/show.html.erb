@@ -1,18 +1,37 @@
+<section class="tasteful-recepies between margin-top">
+    <div class="containers">
+        <div class="global-headline">
+            <div class="animate-top">
+                <h2 class="sub-heading">
+                    <span class="first-letter">W</span>elcome
+                </h2>
+            </div>
+            <div class="animate-bottom">
+                <h2 class="headline headline-dark"> Our Story</h2>
+            </div>
+        </div>
+    </div>
+</section>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @product.title %>
+    <strong>Title:</strong>
+    <%= @product.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @product.description %>
+    <strong>Description:</strong>
+    <%= @product.description %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
+    <strong>Price:</strong>
+    <%= @product.price %>
+</p>
+
+<p>
+    <strong>Image:</strong>
+    <%= image_tag(@product.image.url) %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

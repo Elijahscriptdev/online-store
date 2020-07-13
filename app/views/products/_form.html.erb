@@ -27,6 +27,12 @@
 </div>
 
 <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, class:"form-control" %>
+    <%= form.hidden_field :image_cache %>
+</div>
+
+<div class="field">
     <%= form.label :category, class:"" %><br />
     <%= form.select :category_id, Category.all.map {|cat| [cat.name, cat.id]}, class: 'form-group text-secondary', :prompt => 'Select one!' %>
 </div>
