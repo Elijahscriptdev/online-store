@@ -1,20 +1,66 @@
+<section class="tasteful-recepies between margin-top">
+    <div class="containers">
+        <div class="global-headline">
+            <div class="animate-top">
+                <h2 class="sub-heading">
+                    <span class="first-letter">W</span>elcome
+                </h2>
+            </div>
+            <div class="animate-bottom">
+                <h2 class="headline headline-dark"> Our Story</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-6">
+            <p>
+                <strong>Title:</strong>
+                <%= @product.title %>
+            </p>
+            <p>
+                <strong>Title:</strong>
+                <%= @product.title %>
+            </p>
+
+            <p>
+                <strong>Description:</strong>
+                <%= @product.description %>
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                <%= @product.price %>
+            </p>
+        </div>
+        <div class="col-6">
+            <p>
+                <strong>Title:</strong>
+                <%= @product.title %>
+            </p>
+            <p>
+                <strong>Title:</strong>
+                <%= @product.title %>
+            </p>
+
+            <p>
+                <strong>Description:</strong>
+                <%= @product.description %>
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                <%= @product.price %>
+            </p>
+        </div>
+    </div>
+</section>
 <h1>Shops#show</h1>
 <p>Find me in app/views/shops/show.html.erb</p>
 <p id="notice"><%= notice %></p>
 
-<p>
-    <strong>Title:</strong>
-    <%= @product.title %>
-</p>
 
-<p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-</p>
-
-<p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-</p>
 
 <%= link_to 'Back', root_path %>
