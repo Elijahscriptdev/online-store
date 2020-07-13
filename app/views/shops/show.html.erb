@@ -7,7 +7,7 @@
                 </h2>
             </div>
             <div class="animate-bottom">
-                <h2 class="headline headline-dark"> Our Story</h2>
+                <h2 class="headline headline-dark"><%= link_to 'Home', root_path %> / <%= link_to  "Shop", shops_path %></h2>
             </div>
         </div>
     </div>
@@ -16,51 +16,29 @@
 <section class="container">
     <div class="row">
         <div class="col-6">
-            <p>
-                <strong>Title:</strong>
-                <%= @product.title %>
-            </p>
-            <p>
-                <strong>Title:</strong>
-                <%= @product.title %>
-            </p>
-
-            <p>
-                <strong>Description:</strong>
-                <%= @product.description %>
-            </p>
-
-            <p>
-                <strong>Price:</strong>
-                <%= @product.price %>
-            </p>
+            <%= image_tag(@product.image.url) %>
         </div>
         <div class="col-6">
             <p>
-                <strong>Title:</strong>
-                <%= @product.title %>
+                $<%= @product.price %>
             </p>
             <p>
-                <strong>Title:</strong>
-                <%= @product.title %>
+                <strong><%= @product.title %></strong>
+
             </p>
 
             <p>
-                <strong>Description:</strong>
                 <%= @product.description %>
             </p>
 
-            <p>
-                <strong>Price:</strong>
-                <%= @product.price %>
-            </p>
+
         </div>
     </div>
 </section>
+
+<p>
+    <%= @product.description %>
+</p>
 <h1>Shops#show</h1>
 <p>Find me in app/views/shops/show.html.erb</p>
 <p id="notice"><%= notice %></p>
-
-
-
-<%= link_to 'Back', root_path %>
