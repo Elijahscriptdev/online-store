@@ -13,8 +13,13 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+// @import "bootstrap/scss/bootstrap";
+@import "materialize";
+@import 'materialize-css/dist/css/materialize';
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 
 *,
 *::before,
