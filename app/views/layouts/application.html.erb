@@ -14,7 +14,64 @@
 </head>
 
 <body class="me">
-    <header>
+    <header class="containe">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <%= link_to  "LOGO", root_path, class:"navbar-brand nav-link text-white" %>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item"><%= link_to  "Home", root_path, class:"nav-link active text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Shop", shops_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Account", "#", class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "About Us", about_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Contact Us", contact_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Products", products_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "View Cart", cart_show_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Categories", categories_path, class:"nav-link text-white" %></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <!-- <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="logo" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584496845/download_2_dnk6do.png"></a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <%= link_to  "Home", root_path, class: "nav-link" %>
+                    </li>
+                    
+                </ul>
+
+                <ul class="navbar-nav" id="navbarTogglerDemo03">
+                    
+                    <li class="nav-item">
+                        <%= link_to  "Logout", class: "nav-link", method: :delete %>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <%= link_to  "Login", class: "nav-link" %>
+                    </li>
+                    <li class="nav-link">
+                        |
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to  "Signup", class: "nav-link" %>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </nav>
+    </header> -->
+    <!-- <header>
         <div class="containers">
             <nav class="nav">
                 <div class="menu-toggle">
@@ -33,7 +90,7 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <%= yield %>
 

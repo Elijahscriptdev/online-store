@@ -23,8 +23,9 @@
 
 <section class="discovery-our-story">
     <div class="container">
-        <div class="restaurant-info">
-            <div class="restaurant-description padding-right animate-left">
+       
+        <div class="restaurant-info row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-description padding-right animatable bounceInLeft">
                 <div class="global-headline">
                     <h2 class="headline headline-dark"> Our Story</h2>
                 </div>
@@ -37,7 +38,7 @@
                 </p>
                 <%= link_to  "About Us", about_path, class:"btn-about " %>
             </div>
-            <div class="restaurant-info-img animate-right">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-info-img animatable bounceInRight">
                 <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456838/k5gkhzjcuqvkwp6oxr4l.jpg" alt="">
             </div>
         </div>
@@ -47,48 +48,25 @@
 
 <div class="container">
     <h2 class="headline headline-dark text-center">Categories</h2>
-    <div class="ro">
-        <div class="col-lg-4 col-md-6 col-xs-6 img-col">
-            <%= image_tag "goatn.svg", size: "100x100", class:"img1" %>
-            <p class="text-center">
-                <small>Goat</small>
-            </p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-6 img-col">
-            <%= image_tag "chickenn.svg", size: "100x100", class:"img1" %>
-            <p class="text-center">
-                <small>Chicken</small>
-            </p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-6 img-col">
-            <%= image_tag "pign.svg", size: "100x100", class:"img1" %>
-            <p class="text-center">
-                <small>Pork</small>
-            </p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-6 img-col">
-            <%= image_tag "turkeynn.svg", size: "100x100", class:"img1" %>
-            <p class="text-center">
-                <small>Turkey</small>
-            </p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-6 img-col">
-            <%= image_tag "cown.svg", size: "100x100", class:"img1" %>
-            <p class="text-center">
-                <small>Beef</small>
-            </p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-6 img-col">
-            <%= image_tag "fishn.svg", size: "100x100", class:"img1" %>
-            <p class="text-center">
-                <small>Fish</small>
-            </p>
+    <div class="">
+        <div class="row">
+            <% @categories.each do |category| %>
+                <div class="col-lg-3">
+                    <%= category.name %>
+                    <%= image_tag(category.image.url) %>
+                    <!-- <%= category.description %> -->
+                    
+                    <!-- <%= link_to 'Show', category %> -->
+                    <!-- <%= link_to 'Edit', edit_category_path(category) %> -->
+                    <!-- <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+                </div>
+        <% end %>
         </div>
     </div>
 </div>
 <!--category end-->
 
-<section class="tasteful-recepies between">
+<!-- <section class="tasteful-recepies between">
     <div class="containers">
         <div class="global-headline">
             <div class="animate-top">
@@ -101,19 +79,13 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--tasteful-recepies end-->
 
 <section class="discover-our-menu">
     <div class="containers">
-        <div class="restaurant-info">
-            <div class="image-group padding-right animate-left">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584979926/burrito-chicken-delicious-dinner-461198_gubpjf.jpg" alt="">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584979926/burrito-chicken-delicious-dinner-461198_gubpjf.jpg" alt="">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584979926/burrito-chicken-delicious-dinner-461198_gubpjf.jpg" alt="">
-                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584979926/burrito-chicken-delicious-dinner-461198_gubpjf.jpg" alt="">
-            </div>
-            <div class="restaurant-description animate-right">
+        <div class="restaurant-info row">
+            <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-description animate-right">
                 <div class="global-headline">
                     <h2 class="sub-heading">
                         <span class="first-letter">W</span>elcome
@@ -129,11 +101,17 @@
                 </p>
                 <%= link_to  "Shop", shops_path, class:"btn-about " %>
             </div>
+            <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 image-group padding-right animate-left">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1591046636/alex-munsell-Yr4n8O_3UPc-unsplash_fegdi8.jpg" alt="">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051023/pexels-mali-maeder-65175_sdghe6.jpg" alt="">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051026/pexels-freestocksorg-145804_vhv3f1.jpg" alt="">
+                <img src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1591592123/jakub-kapusnak-vLQzopDRSNI-unsplash_cvszbv.jpg" alt="">
+            </div>
         </div>
     </div>
 </section>
 
-<section class="perfect-blend between">
+<!-- <section class="perfect-blend between">
     <div class="containers">
         <div class="global-headline">
             <div class="animate-top">
@@ -146,13 +124,35 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--perfect-blend end-->
+
+<div class="container">
+    <h2 class="headline headline-dark text-center">Featured Products</h2>
+    <div class="">
+        <div class="row row-cols-1 row-cols-md-2">
+            <% @products.each do |product| %>
+            <div class="col mb-4">
+                <div class="card">
+                    
+                    <img class="animate-top card-img-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= product.price %></h5>
+                        <p class="card-text"><%= product.title %> <%= link_to 'Show', product %></p>
+                        <p class="card-text"><%= product.description %></p>
+                      </div>
+                    </div>
+                    
+                </div>
+        <% end %>
+        </div>
+    </div>
+</div>
 
 <section class="culinary-delight">
     <div class="container">
-        <div class="restaurant-info">
-            <div class="restaurant-description padding-right animatable bounceInLeft">
+        <div class="row restaurant-info">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-description padding-right animatable bounceInLeft">
                 <div class="global-headline">
                     <h2 class="headline headline-dark"> Our Story</h2>
                 </div>
@@ -165,9 +165,11 @@
                 </p>
                 <%= link_to  "About Us", about_path, class:"btn-about " %>
             </div>
-            <div class="image-group animatable bounceInRight">
-                <img class="animate-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456838/k5gkhzjcuqvkwp6oxr4l.jpg" alt="">
-                <img class="animate-bottom" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456838/k5gkhzjcuqvkwp6oxr4l.jpg" alt="">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 image-group animatable bounceInRight">
+                <img class="animate-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt="">
+                <img class="animate-bottom" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1591592124/brittany-sawyer-NxvAV87HDT8-unsplash_ksjbns.jpg" alt="">
+                <img class="animate-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt="">
+                <img class="animate-bottom" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1591592124/brittany-sawyer-NxvAV87HDT8-unsplash_ksjbns.jpg" alt="">
             </div>
         </div>
     </div>
