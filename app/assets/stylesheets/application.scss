@@ -44,122 +44,74 @@ body {
   overflow-x: hidden;
 }
 
-section{
-  padding: 3.9rem 0;
-}
-
 img{
   width: 100%;
   max-width: 100%;
 }
 
-ul li {
-  list-style: none;
-}
-
-p {
-  font-size: 1.6rem;
-}
-
-.containers {
-  width: 100%;
-  max-width: 122.5rem;
-  margin: 0 auto;
-  padding: 0 2.4rem;
-}
-
-/*header*/
 header{
   width:100%;
   position: absolute;
   top: 0;
-  left: 0;
+//   left: 10;
   z-index: 1;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
 
-.nav{
-  height: 7.2rem;
-  display: flex;
-  // align-items: center;
-  justify-content: center;
-}
-
-.menu-toggle{
-  color: #fff;
-  font-size: 2.2rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 2.5rem;
-  cursor: pointer;
-  z-index: 1500;
-}
-
-.fa-times {
-  display: none;
-}
-
-.nav-list {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100vh;
-  background-color: var(--main-font-color-dark);
-  padding: 4.4rem;
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-  justify-content: space-around;
-  z-index: 1250;
-  transform: translateX(-100%);
-  transition: transform .5s;
-}
-
-.open .fa-times{
-  display: block;
-}
-
-.open .fa-bars{
-  display: none;
-}
-
-.open .nav-list{
-  transform: translateX(0);
-}
-
-.open .nav::before{
-  opacity: 1;
-  transform: scale(1);
-}
-
-.nav-item {
-  border-bottom: 2px solid rgba(255,255,255,.3);
-}
-
-.nav-link {
-  display: block;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  transition: color .5s;
-}
-
-.nav-link:hover{
-  color: var(--secondary-font-color);
-}
-
-/*Hero*/
+section{
+	padding: 3.9rem 0;
+  }
+  
+  img{
+	width: 100%;
+	max-width: 100%;
+  }
+  
+  ul li {
+	list-style: none;
+  }
+  
+  p {
+	font-size: 1.6rem;
+  }
+  
+  .nav-link {
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	transition: color .5s;
+  }
 
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1589667374/main_kgnuev.jpg") center no-repeat;
+  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584979952/barbecue-bbq-beef-brown-236887_usy4z3.jpg");
   background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	/* styles */
+	.hero {
+		height: 60vh;
+	  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	/* styles */
+	.hero {
+		height: 100%;
+	  }
+}
+
+.nav-link:hover{
+  color: var(--secondary-font-color);
+  background: none;
 }
 
 .sub-heading{
@@ -183,11 +135,11 @@ header{
   animation: scale .5s forwards;
 }
 
-/*Discover our story*/
+// /*Discover our story*/
 
 .global-headline{
   text-align: center;
-  margin-top: 3.9rem;
+  margin-top: 1rem;
 }
 
 .headline-dark {
@@ -197,7 +149,7 @@ header{
 
 .restaurant-info{
   text-align: center;
-  // font-size: 1rem;
+//   font-size: .5rem;
 }
 
 .restaurant-description {
@@ -207,7 +159,7 @@ header{
 .restaurant-description p{
   line-height: 1.6;
   margin-bottom: 2.4rem;
-  // font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .btn-about {
@@ -260,7 +212,7 @@ header{
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Tasteful recepies*/ 
+// /* Tasteful recepies*/ 
 
 .tasteful-recepies {
   background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1587456838/k5gkhzjcuqvkwp6oxr4l.jpg") center no-repeat;
