@@ -74,31 +74,51 @@ section{
   p {
 	font-size: 1.6rem;
   }
+
+  .logo {
+	  font-weight: bolder;
+  }
   
   .nav-link {
 	display: block;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 1rem;
+	font-size: .8rem;
 	transition: color .5s;
   }
 
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584979952/barbecue-bbq-beef-brown-236887_usy4z3.jpg");
+  background: linear-gradient(
+	rgba(24, 23, 23, 0.45), 
+	rgba(15, 6, 6, 0.45)
+  ), url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600121404/raw-beef-steaks-with-spices-rosemary-flat-lay-top-view_2829-4886_hquimr.jpg");
   background-size: cover;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   display: flex;
   align-items: center;
   text-align: center;
+//   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
 	/* styles */
 	.hero {
 		height: 60vh;
+	  }
+
+	  .sub-heading{
+		font-size: 2.5rem!important;
+		line-height: .3;
+		letter-spacing: 1.5px;
+	  }
+	  
+	  .headline{
+		font-size: 1.5rem!important;
+		font-weight: 750;
+		letter-spacing: .4rem;
 	  }
 }
 
@@ -107,7 +127,106 @@ section{
 	.hero {
 		height: 100%;
 	  }
+
+	  .sub-heading{
+		font-size: 1.5rem!important;
+		line-height: .2;
+		letter-spacing: 1px;
+	  }
+	  
+	  .headline{
+		font-size: 2rem!important;
+		font-weight: 750;
+		letter-spacing: .2rem;
+	  }
 }
+
+
+
+.containers {
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+// /*header*/
+// header{
+//   width:100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 1;
+//   background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+// }
+
+// .nav{
+//   height: 7.2rem;
+//   display: flex;
+//   // align-items: center;
+//   justify-content: center;
+// }
+
+// .menu-toggle{
+//   color: #fff;
+//   font-size: 2.2rem;
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   right: 2.5rem;
+//   cursor: pointer;
+//   z-index: 1500;
+// }
+
+// .fa-times {
+//   display: none;
+// }
+
+// .nav-list {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 80%;
+//   height: 100vh;
+//   background-color: var(--main-font-color-dark);
+//   padding: 4.4rem;
+//   display: flex;
+//   flex-direction: column;
+//   // align-items: center;
+//   justify-content: space-around;
+//   z-index: 1250;
+//   transform: translateX(-100%);
+//   transition: transform .5s;
+// }
+
+// .open .fa-times{
+//   display: block;
+// }
+
+// .open .fa-bars{
+//   display: none;
+// }
+
+// .open .nav-list{
+//   transform: translateX(0);
+// }
+
+// .open .nav::before{
+//   opacity: 1;
+//   transform: scale(1);
+// }
+
+// .nav-item {
+//   border-bottom: 2px solid rgba(255,255,255,.3);
+// }
+
+// .nav-link {
+//   display: block;
+//   color: #fff;
+//   text-transform: uppercase;
+//   font-size: 1.6rem;
+//   transition: color .5s;
+// }
 
 .nav-link:hover{
   color: var(--secondary-font-color);
@@ -127,7 +246,7 @@ section{
 }
 
 .headline{
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-family: var("--main-font");
   color: whitesmoke;
   font-weight: 750;
@@ -144,7 +263,7 @@ section{
 
 .headline-dark {
   color: var(--main-font-color-dark);
-  letter-spacing: .7rem;
+  letter-spacing: .5rem;
 }
 
 .restaurant-info{
@@ -158,8 +277,8 @@ section{
 
 .restaurant-description p{
   line-height: 1.6;
-  margin-bottom: 2.4rem;
-  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
 .btn-about {
@@ -240,7 +359,7 @@ section{
 
 // footer
 footer{
-  padding: 7.9rem 0;
+  padding: 1.9rem 0;
   background-color: #121212;
   color: #fff;
   text-align: center;
@@ -248,11 +367,11 @@ footer{
 }
 
 .back-to-top {
-  width: 7rem;
-  height: 7rem;
+  width: 4rem;
+  height: 4rem;
   background-color: #121212;
   position: absolute;
-  top: -3rem;
+  top: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
@@ -261,23 +380,44 @@ footer{
 .back-to-top .fa-chevron-up{
   // display: block;
   color: #fff;
-  font-size: 2rem;
-  // padding: 15px;
+  font-size: 2.5rem;
+//   padding: 15px 0;
   animation: up 2s infinite;
 }
 
 .footer-content h4{
   text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 100;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 3px;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 }
 
-// .ssocial-icons {
-//   display: flex;
-//   flex-direction: row;
-// }
+.footer-content p{
+	text-transform: uppercase;
+	font-size: .7rem;
+	font-weight: 100;
+	letter-spacing: 2px;
+	// margin: 1rem 0;
+  }
+
+.social-icons ul {
+	display: flex;
+	flex-direction: row;
+	color: #fff;
+	text-align: center;
+	justify-content: center;
+}
+
+.social-icons ul li a{
+	// display: flex;
+	// flex-direction: row;
+	color: #fff;
+	margin: 0 10px;
+	font-size: 30px;
+	// text-align: center;
+	// justify-content: center;
+}
 
 // media quries
 
@@ -286,25 +426,25 @@ footer{
     padding: 3rem;
   }
 
-  .menu-toggle {
-    display: none;
-  }
+//   .menu-toggle {
+//     display: none;
+//   }
 
-  .nav {
-    justify-content: space-between;
-  }
+//   .nav {
+//     justify-content: space-between;
+//   }
 
-  .nav-list {
-    position: initial;
-    width: initial;
-    height: initial;
-    background-color: transparent;
-    padding: 0;
-    justify-content: initial;
-    flex-direction: row;
-    transform: initial;
-    transition: initial;
-  }
+//   .nav-list {
+//     position: initial;
+//     width: initial;
+//     height: initial;
+//     background-color: transparent;
+//     padding: 0;
+//     justify-content: initial;
+//     flex-direction: row;
+//     transform: initial;
+//     transition: initial;
+//   }
 
   .nav-item{
     margin: 0.9rem .2rem;
@@ -352,7 +492,7 @@ footer{
 
   .footer-content {
     max-width: 77.5rem;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .footer-content-about {
@@ -961,4 +1101,219 @@ footer{
 	-moz-animation-name: moveUp;
 	-o-animation-name: moveUp;
 	animation-name: moveUp;
+}
+
+// 
+.car h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 80px;
+}
+.car h2 b {
+	color: #ffc000;
+}
+.car h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	background: rgba(0, 0, 0, 0.2);
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	min-height: 330px;
+    text-align: center;
+	overflow: hidden;
+}
+.carousel .item .img-box {
+	height: 160px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+	margin: 10px 0;
+}
+.carousel .item .btn {
+	color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-top: 5px;
+    line-height: 16px;
+}
+.carousel .item .btn:hover, .carousel .item .btn:focus {
+	color: #fff;
+	background: #ffc000;
+	border-color: #000;
+	box-shadow: none;
+}
+.carousel .item .btn i {
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.carousel .thumb-wrapper {
+	text-align: center;
+}
+.carousel .thumb-content {
+	padding: 15px;
+}
+.carousel .carousel-control {
+	height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel .carousel-control i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	color: #999;
+	margin-right: 5px;
+}
+.carousel .item-price span {
+	color: #86bd57;
+	font-size: 110%;
+}
+.carousel .carousel-control.left i {
+	margin-left: -3px;
+}
+.carousel .carousel-control.left i {
+	margin-right: -3px;
+}
+.carousel .carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border-color: transparent;
+}
+.carousel-indicators li {	
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {	
+	background: rgba(0, 0, 0, 0.6);
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+
+.contact-image {
+	height:170px;
+	width:100%;
+	background-size:cover;
+  }
+
+//   About
+.hero-about {
+	width: 100%;
+  height: 50vh;
+  background: linear-gradient(
+	rgba(24, 23, 23, 0.45), 
+	rgba(15, 6, 6, 0.45)
+  ), url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600119274/top-view-fresh-steak-table-with-tomatoes_23-2148439500_qqkaxq.jpg");
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.about p {
+	font-size: 1rem;
+	font-weight: 100;
+}
+
+.hero-contact {
+	width: 100%;
+  height: 50vh;
+  background: linear-gradient(
+	rgba(24, 23, 23, 0.45), 
+	rgba(15, 6, 6, 0.45)
+  ), url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600127182/beef-chunks-with-ingredients-served-table_1220-5164_-_Copy_cbwtod.jpg");
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-shop {
+	width: 100%;
+  height: 50vh;
+  background: linear-gradient(
+	rgba(24, 23, 23, 0.45), 
+	rgba(15, 6, 6, 0.45)
+  ), url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600127182/beef-chunks-with-ingredients-served-table_1220-5164_-_Copy_cbwtod.jpg");
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-shop-index {
+	width: 100%;
+  height: 50vh;
+  background: linear-gradient(
+	rgba(24, 23, 23, 0.45), 
+	rgba(15, 6, 6, 0.45)
+  ), url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600127183/grilled-ribs-wooden-board-tomato-pepper-potato-top-view_141793-3749_-_Copy_z54zlj.jpg");
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
