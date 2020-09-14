@@ -109,129 +109,31 @@ section{
 	  }
 }
 
+.nav-link:hover{
+  color: var(--secondary-font-color);
+  background: none;
+}
 
+.sub-heading{
+  font-size: 4.5rem;
+  font-family: var("--secondary-font");
+  color: whitesmoke;
+  font-weight: 400;
+  line-height: .4;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp .5s forwards;
+  animation-delay: .5s;
+}
 
-// .containers {
-//   width: 100%;
-//   max-width: 122.5rem;
-//   margin: 0 auto;
-//   padding: 0 2.4rem;
-// }
-
-// /*header*/
-// header{
-//   width:100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 1;
-//   background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
-// }
-
-// .nav{
-//   height: 7.2rem;
-//   display: flex;
-//   // align-items: center;
-//   justify-content: center;
-// }
-
-// .menu-toggle{
-//   color: #fff;
-//   font-size: 2.2rem;
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   right: 2.5rem;
-//   cursor: pointer;
-//   z-index: 1500;
-// }
-
-// .fa-times {
-//   display: none;
-// }
-
-// .nav-list {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 80%;
-//   height: 100vh;
-//   background-color: var(--main-font-color-dark);
-//   padding: 4.4rem;
-//   display: flex;
-//   flex-direction: column;
-//   // align-items: center;
-//   justify-content: space-around;
-//   z-index: 1250;
-//   transform: translateX(-100%);
-//   transition: transform .5s;
-// }
-
-// .open .fa-times{
-//   display: block;
-// }
-
-// .open .fa-bars{
-//   display: none;
-// }
-
-// .open .nav-list{
-//   transform: translateX(0);
-// }
-
-// .open .nav::before{
-//   opacity: 1;
-//   transform: scale(1);
-// }
-
-// .nav-item {
-//   border-bottom: 2px solid rgba(255,255,255,.3);
-// }
-
-// .nav-link {
-//   display: block;
-//   color: #fff;
-//   text-transform: uppercase;
-//   font-size: 1.6rem;
-//   transition: color .5s;
-// }
-
-// .nav-link:hover{
-//   color: var(--secondary-font-color);
-// }
-
-// /*Hero*/
-
-// .hero {
-//   width: 100%;
-//   height: 100vh;
-//   background: url("https://res.cloudinary.com/elijjaaahhhh/image/upload/v1589667374/main_kgnuev.jpg") center no-repeat;
-//   background-size: cover;
-//   display: flex;
-//   align-items: center;
-//   text-align: center;
-// }
-
-// .sub-heading{
-//   font-size: 4.5rem;
-//   font-family: var("--secondary-font");
-//   color: whitesmoke;
-//   font-weight: 400;
-//   line-height: .4;
-//   letter-spacing: 2px;
-//   opacity: 0;
-//   animation: fadeUp .5s forwards;
-//   animation-delay: .5s;
-// }
-
-// .headline{
-//   font-size: 3.5rem;
-//   font-family: var("--main-font");
-//   color: whitesmoke;
-//   font-weight: 750;
-//   letter-spacing: .5rem;
-//   animation: scale .5s forwards;
-// }
+.headline{
+  font-size: 3.5rem;
+  font-family: var("--main-font");
+  color: whitesmoke;
+  font-weight: 750;
+  letter-spacing: .5rem;
+  animation: scale .5s forwards;
+}
 
 // /*Discover our story*/
 
