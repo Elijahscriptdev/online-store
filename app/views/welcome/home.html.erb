@@ -1,19 +1,11 @@
 <section class="hero" id="hero">
     <div class="containers">
-        <h2 class="sub-heading">
+        <h2 class="sub-heading mt-5">
             Domi<span class="first-letter">*</span>nous Restaurant
         </h2>
-        <h1 class="headline">Eat Healthy</h1>
+        <h1 class="headline mt-5">Eat Healthy</h1>
         <div class=" headline-description">
-            <!-- <div class="seperator">
-                <div class="line line-left"></div>
-                <div class="asterisk">
-                    <i class="fas fa-asterisk"></i>
-                </div>
-                <div class="line line-right"></div>
-            </div> -->
-            <div class="single-animation">
-                <!-- <h5 class="text-white">Ask us how</h.5> -->
+            <div class="single-animation mt-5">
                 <%= link_to  "About Us", about_path, class:"btn-about text-white" %>
             </div>
         </div>
@@ -27,14 +19,15 @@
         <div class="restaurant-info row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-description padding-right animatable bounceInLeft">
                 <div class="global-headline">
-                    <h2 class="headline headline-dark"> Our Story</h2>
+                    <h2 class="headline headline-dark"> ABOUT US</h2>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Mollitia quisquam iusto unde incidunt eaque laudantium
-                    cupiditate minus quibusdam similique fuga totam assumenda,
-                    ipsam delectus numquam quo aut quasi officiis ex eum?
-                    Dignissimos atque enim inventore eligendi ratione fugiat
+                    The Pizza Restaurant was founded in blabla by 
+                    Mr. Italiano in lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <%= link_to  "About Us", about_path, class:"btn-about " %>
             </div>
@@ -46,13 +39,13 @@
 </section>
 <!-- Discover of our story -->
 
-<div class="container">
-    <h2 class="headline headline-dark text-center">Categories</h2>
+<div class="container my-5">
+    <h2 class="headline headline-dark text-center">WHAT WE OFFER</h2>
     <div class="">
         <div class="row">
             <% @categories.each do |category| %>
-                <div class="col-lg-3">
-                    <%= category.name %>
+                <div class="col-lg-3 mt-5">
+                    <!-- <%= category.name %> -->
                     <%= image_tag(category.image.url) %>
                     <!-- <%= category.description %> -->
                     
@@ -66,31 +59,12 @@
 </div>
 <!--category end-->
 
-<!-- <section class="tasteful-recepies between">
-    <div class="containers">
-        <div class="global-headline">
-            <div class="animate-top">
-                <h2 class="sub-heading">
-                    <span class="first-letter">W</span>elcome
-                </h2>
-            </div>
-            <div class="animate-bottom">
-                <h2 class="headline headline-dark"> Our Story</h2>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!--tasteful-recepies end-->
-
 <section class="discover-our-menu">
     <div class="containers">
         <div class="restaurant-info row">
             <div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-description animate-right">
                 <div class="global-headline">
-                    <h2 class="sub-heading">
-                        <span class="first-letter">W</span>elcome
-                    </h2>
-                    <h2 class="headline headline-dark"> Our Story</h2>
+                    <h2 class="headline headline-dark">SPECIAL OFFER</h2>
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -127,8 +101,47 @@
 </section> -->
 <!--perfect-blend end-->
 
-<div class="container">
-    <h2 class="headline headline-dark text-center">Featured Products</h2>
+<div class="container car">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Trending <b>Products</b></h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			<!-- Carousel indicators -->
+			<!-- <ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>    -->
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="row">
+						<% @products.each do |product| %>
+                        <div class="col-sm-3">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img class="animate-top card-img-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4><%= link_to product.title, product %></h4>
+									<p class="item-price"><strike>$31.00</strike> <span>$<%= product.price %></span></p>
+									
+									<a href="#" class="btn btn-primary">Add to Cart</a>
+								</div>						
+							</div>
+                        </div>
+                        <% end %>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="container">
+    <h2 class="headline headline-dark text-center">FEATURED PRODUCTS</h2>
     <div class="">
         <div class="row row-cols-1 row-cols-md-2">
             <% @products.each do |product| %>
@@ -147,14 +160,16 @@
         <% end %>
         </div>
     </div>
-</div>
+</div> -->
+
+
 
 <section class="culinary-delight">
     <div class="container">
         <div class="row restaurant-info">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 restaurant-description padding-right animatable bounceInLeft">
                 <div class="global-headline">
-                    <h2 class="headline headline-dark"> Our Story</h2>
+                    <h2 class="headline headline-dark">NEW STOCK</h2>
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -174,3 +189,38 @@
         </div>
     </div>
 </section>
+
+<!-- Team Container -->
+<!-- <div class="w3-container w3-padding-64 w3-center" id="team">
+    <h2>OUR TEAM</h2>
+    <p>Meet the team - our office rats:</p>
+    
+    <div class="w3-row"><br>
+    
+    <div class="w3-quarter">
+      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Johnny Walker</h3>
+      <p>Web Designer</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Rebecca Flex</h3>
+      <p>Support</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Jan Ringo</h3>
+      <p>Boss man</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Kai Ringo</h3>
+      <p>Fixer</p>
+    </div>
+    
+    </div>
+    </div> -->
+    
