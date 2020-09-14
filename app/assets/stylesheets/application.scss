@@ -104,12 +104,36 @@ section{
 	.hero {
 		height: 60vh;
 	  }
+
+	  .sub-heading{
+		font-size: 2.5rem!important;
+		line-height: .3;
+		letter-spacing: 1.5px;
+	  }
+	  
+	  .headline{
+		font-size: 1.5rem!important;
+		font-weight: 750;
+		letter-spacing: .4rem;
+	  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px){
 	/* styles */
 	.hero {
 		height: 100%;
+	  }
+
+	  .sub-heading{
+		font-size: 1.5rem!important;
+		line-height: .2;
+		letter-spacing: 1px;
+	  }
+	  
+	  .headline{
+		font-size: 2rem!important;
+		font-weight: 750;
+		letter-spacing: .2rem;
 	  }
 }
 
