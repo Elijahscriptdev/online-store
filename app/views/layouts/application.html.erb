@@ -1,15 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>OnlineShop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body class="me">
+    <header class="containe">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <%= link_to  "LOGO", root_path, class:"navbar-brand nav-link text-white" %>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item"><%= link_to  "Home", root_path, class:"nav-link active text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Shop", shops_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Account", "#", class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "About Us", about_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Contact Us", contact_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Products", products_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "View Cart", cart_show_path, class:"nav-link text-white" %></li>
+                    <li class="nav-item"><%= link_to  "Categories", categories_path, class:"nav-link text-white" %></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <!-- <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="logo" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1584496845/download_2_dnk6do.png"></a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <%= link_to  "Home", root_path, class: "nav-link" %>
+                    </li>
+                    
+                </ul>
+
+                <ul class="navbar-nav" id="navbarTogglerDemo03">
+                    
+                    <li class="nav-item">
+                        <%= link_to  "Logout", class: "nav-link", method: :delete %>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <%= link_to  "Login", class: "nav-link" %>
+                    </li>
+                    <li class="nav-link">
+                        |
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to  "Signup", class: "nav-link" %>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </nav>
+    </header> -->
+    <!-- <header>
+        <div class="containers">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars" id="fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <a class="nav-logo" href="">Logo</a>
+                <ul class="nav-list">
+                    <li class="nav-item"><%= link_to  "Home", root_path, class:"nav-link active" %></li>
+                    <li class="nav-item"><%= link_to  "Shop", shops_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Account", "#", class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "About Us", about_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Contact Us", contact_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "Products", products_path, class:"nav-link" %></li>
+                    <li class="nav-item"><%= link_to  "View Cart", cart_show_path, class:"nav-link" %></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
     <%= yield %>
-  </body>
+
+    <footer>
+        <div class="containers">
+            <div class="back-to-top">
+                <a href="">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </div>
+            <div class="footer-content">
+                <div class="footer-content-about animate-uo">
+                    <h4>About Meat</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nam temporibus, accusamus quos ut pariatur praesentium in dolor magnam quidem.</p>
+                </div>
+                <div class="footer-content-divider animate-bottom">
+                    <div class="social-menu">
+                        <h4>Follow us</h4>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="https://github.com/Elijahscriptdev"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://twitter.com/ElijahObominuru"><i class="fab fa-twitter-square"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/elijah-obominuru-0b730b143/"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.instagram.com/elijjaaahhhh/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://web.facebook.com/elijah.obominuru.7"><i class="fab fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="newsletter-container">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        console.log('Hello from application.js')
+    </script>
+</body>
+
 </html>
