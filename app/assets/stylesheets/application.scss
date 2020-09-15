@@ -1317,3 +1317,28 @@ footer{
   align-items: center;
   text-align: center;
 }
+
+.btn {
+	color: #333;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #ccc!important;
+    padding: 5px 10px;
+    margin-top: 5px;
+    line-height: 16px;
+}
+
+.btn:hover {
+	color: #fff!important;
+    background: #ffc000!important;
+}
+
+.btn:focus {
+	color: #fff;
+	background: #ffc000!important;
+	border-color: #ffc000!important;
+	box-shadow: none;
+}
