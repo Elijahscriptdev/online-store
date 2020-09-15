@@ -120,7 +120,10 @@
                         <div class="col-sm-3">
 							<div class="thumb-wrapper">
 								<div class="img-box">
-									<img class="animate-top card-img-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt="">
+                                    <% if product.image? %>
+                                    <%= image_tag(product.image.url) %>
+                                    <% end %>
+									<!-- <img class="animate-top card-img-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt=""> -->
 								</div>
 								<div class="thumb-content">
 									<h4><%= link_to product.title, product %></h4>
