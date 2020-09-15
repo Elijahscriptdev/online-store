@@ -9,23 +9,23 @@
 </section>
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="text-center my-5">
     <strong>Title:</strong>
     <%= @product.title %>
 </p>
 
-<p>
+<div class="col-lg-6 col-sm-12">
     <%= image_tag(@product.image.url) %>
-  </p>
+</div>
 
-<p>
+<p class="p-3">
     <strong>Description:</strong>
     <%= @product.description %>
 </p>
 
-<p>
+<p class="p-3">
     <strong>Price:</strong>
     <%= @product.price %>
 </p>
 
-<%= link_to 'Back', root_path %>
+<%= link_to 'Back', root_path, class:"btn my-5 text-center ml-3" %>
