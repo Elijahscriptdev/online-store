@@ -6,7 +6,7 @@
         <h1 class="headline mt-5">Eat Healthy</h1>
         <div class=" headline-description">
             <div class="single-animation mt-5">
-                <%= link_to  "About Us", about_path, class:"btn" %>
+                <%= link_to  "About Us", about_path, class:"btn text-white" %>
             </div>
         </div>
     </div>
@@ -44,9 +44,10 @@
     <div class="">
         <div class="row">
             <% @categories.each do |category| %>
-                <div class="col-lg-3 mt-5">
+                <div class="col-lg-3 mt-5 text-center">
                     <!-- <%= category.name %> -->
-                    <%= image_tag(category.image.url) %>
+                    <%= link_to  category.name, products_path(:cate => category.id), class: "nav-link" %>
+                    <%= link_to image_tag(category.image.url), products_path(:cate => category.name) %>
                     <!-- <%= category.description %> -->
                     
                     <!-- <%= link_to 'Show', category %> -->
@@ -126,7 +127,7 @@
 									<!-- <img class="animate-top card-img-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt=""> -->
 								</div>
 								<div class="thumb-content">
-									<h4><%= link_to product.title, product %></h4>
+                                    <h4><%= link_to product.title, shop_path(product) %></h4>
 									<p class="item-price"><strike>$31.00</strike> <span>$<%= product.price %></span></p>
 									
 									<a href="#" class="btn btn-primary">Add to Cart</a>
@@ -226,4 +227,3 @@
     
     </div>
     </div> -->
-    

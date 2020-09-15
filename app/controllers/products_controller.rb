@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @categories = Category.all
+    @order_item = current_order.order_items.new
     
     cate = params[:cate]
     if !cate.nil?
