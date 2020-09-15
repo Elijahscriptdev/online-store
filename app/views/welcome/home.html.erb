@@ -47,7 +47,7 @@
                 <div class="col-lg-3 mt-5 text-center">
                     <!-- <%= category.name %> -->
                     <%= link_to  category.name, products_path(:cate => category.id), class: "nav-link" %>
-                    <%= link_to image_tag(category.image.url), products_path(:cate => category.name) %>
+                    <%= link_to image_tag(category.image.url), products_path(:cate => category.id) %>
                     <!-- <%= category.description %> -->
                     
                     <!-- <%= link_to 'Show', category %> -->
