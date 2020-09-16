@@ -1,13 +1,60 @@
 <section class="hero-about" id="hero">
     <div class="containers">
         <h5 class="sub-heading mt-5" style="font-size: 2rem;">
-            PRODUCT
+            <%= @categories.name %>
         </h5>
     </div>
 </section>
 <p id="notice"><%= notice %></p>
 
-<table class="mt-5">
+<div class="container car">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+                <!-- <ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>    -->
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <% @products.each do |product| %>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <div class="img-box">
+                                        <% if product.image? %>
+                                        <%= image_tag(product.image.url) %>
+                                        <% end %>
+                                        <!-- <img class="animate-top card-img-top" src="https://res.cloudinary.com/elijjaaahhhh/image/upload/v1600051027/pexels-engin-akyurt-2673353_lojsoh.jpg" alt=""> -->
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4><%= link_to product.title, product %></h4>
+                                        <h4><%= link_to 'view', shop_path(product) %></h4>
+                                        <p class="item-price"><strike>$31.00</strike> <span>$<%= product.price %></span>
+                                        </p>
+
+                                        <%= form_for @order_item, remote: true do |f| %>
+                                        <%= f.hidden_field :product_id, :value => product.id %>
+                                        <%= f.number_field :quantity, value: 1, min: 1 %>
+                                        <%= f.submit "Add To Cart", class:"mt-3 btn btn-primary" %>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                            <% end %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <table class="mt-5">
     <thead>
         <tr>
             <th>Title</th>
@@ -21,12 +68,15 @@
     <tbody>
         <% @products.each do |product| %>
         <tr>
-            <td><%= product.title %></td>
-            <td><%= product.description %></td>
-            <td><%= product.price %></td>
-            <td><%= link_to 'Show', product %></td>
-            <td><%= link_to 'Edit', edit_product_path(product) %></td>
-            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><% product.title %></td>
+            <td><% product.description %></td>
+            <td><% product.price %></td>
+            <% if product.image? %>
+            <td><% image_tag(product.image.url) %></td>
+            <% end %>
+            <td><% link_to 'Show', product %></td>
+            <td><% link_to 'Edit', edit_product_path(product) %></td>
+            <td><% link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <% end %>
     </tbody>
@@ -34,10 +84,10 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<% link_to 'New Product', new_product_path %>
 <br>
 <br>
 <h1>categories</h1>
 <% @categories.each do |category| %>
-<%= link_to  category.name, products_path(:cate => category.id), class: "" %>
-<% end %>
+<% link_to  category.name, products_path(:cate => category.id), class: "" %>
+<% end %> -->

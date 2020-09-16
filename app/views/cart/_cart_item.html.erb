@@ -1,19 +1,44 @@
-<h1>Cart#show</h1>
-<p>Find me in app/views/cart/show.html.erb</p>
-<% @order_items.each do |item| %>
-<h3>
-    <%= item.product.title %>
-</h3>
-<h3>
-    <%= item.product.price %>
-</h3>
-<%= form_with model: item, remote: true do |f| %>
-<%= f.hidden_field :product_id, value: item.product.id %>
-<%= f.number_field :quantity, value: item.quantity.to_i, min: 1  %>
-<%= f.submit "Update Cart" %>
-<%= link_to  "Remove Items", item, method: :delete, remote: true %>
-<h2>Subtotal: <%= item.total %></h2>
-<% end %>
+<div class="container car">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <% @order_items.each do |item| %>
+                            <div class="col-sm-3">
+                                <div class="thumb-wrapper">
+                                    <div class="img-box">
+                                        <% if item.product.image.url %>
+                                        <%= image_tag(item.product.image.url) %>
+                                        <% end %>
+                                        
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4><%= item.product.title %></h4>
+                                        <p class="item-price"><strike>$31.00</strike>
+                                            <span>$<%= item.product.price %></span>
+                                        </p>
 
-<% end %>
-<h2>Your cart total is <%= current_order.subtotal %></h2>
+                                        <%= form_with model: item, remote: true do |f| %>
+                                        <%= f.hidden_field :product_id, value: item.product.id %>
+                                        <%= f.number_field :quantity, value: item.quantity.to_i, min: 1  %>
+                                        <%= f.submit "Update Cart", class:"btn btn-success" %>
+                                        <%= link_to  "Remove Items", item, method: :delete, remote: true, class:"btn btn-success" %>
+                                        <h4>Subtotal: <%= item.total %></h4>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                            <% end %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="text-center mb-5">Your cart total is <%= current_order.subtotal %></h2>
+
